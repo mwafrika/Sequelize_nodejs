@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "babel-node app.js",
+    "dev-start": "nodemon app.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "@hapi/joi": "^17.1.1",
+    "axios": "^0.20.0",
+    "babel-watch": "^7.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.1.0",
+    "mysql3": "^0.4.13",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "redis": "^3.0.2",
+    "redis-server": "^1.2.2",
+    "sequelize": "^6.3.5",
+    "sequelize-auto": "^0.5.4",
+    "sequelize-cli": "^6.2.0",
+    "service": "^0.1.4",
+    "status": "0.0.13"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "nodemon": "^2.0.4"
+  }
+}

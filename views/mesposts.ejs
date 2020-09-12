@@ -1,0 +1,19 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <h2>LISTE DES PUBLICATIONS</h2>
+      
+            <% for(var i=0; i<result.length; i++) { %>
+              <div class="card card-body row mt-4" style="height: auto; display: flex; flex-wrap: wrap;">
+              <h4>
+                  <b><%= result[i].title %></b>  
+               </h4>
+               <h5>  
+                <%= result[i].description %>
+                   </h5>
+              </div>
+            <%} %>
+    </div>
+  </div>
+  <script>
+   
+  </script>

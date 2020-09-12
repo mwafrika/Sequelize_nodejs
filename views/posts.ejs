@@ -1,0 +1,64 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i> POSTS</h1>
+      <%- include('./partials/messages') %>
+      <form action="/posts/item" method="POST">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            class="form-control"
+            placeholder="Enter Tile"
+            value="<%= typeof title != 'undefined' ? title : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+            class="form-control"
+            placeholder="Enter description"
+            value="<%= typeof description != 'undefined' ? description : '' %>"
+          >
+          </textarea>
+        </div>
+        <button type="submit" id="post" class="btn btn-primary btn-block">Post</button>
+      </form>
+    </div>
+    <div class="card card-body row mt-4" style="height: auto; display: flex; flex-wrap: wrap;">
+     
+          <% for(let key in (typeof result != "undefined" ? result :"")) { %>
+            <h3>  
+          <%= JSON.stringify(result[key].title) %>
+             </h3>
+             <h4>  
+          <%= JSON.stringify(result[key].description) %>
+             </h4>
+          <%} %>
+    </div>
+  </div>
+</div>
+
+<script>
+  //  document.getElementById("post").addEventListener("click", sendTok);
+  // function sendTok(e) {
+  //   e.preventDefault();
+    fetch("/posts/item?data=jejejejejejeej", {
+      method: "GET",
+      headers: {
+        Authorization: localStorage.getItem("token"),
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      // body: JSON.stringify({token})
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  // }
+</script>
